@@ -1,4 +1,4 @@
-﻿using DevExpress.Web.ASPxGridView;
+﻿using DevExpress.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ public partial class _Default : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
 
     }
-    protected void ASPxGridView1_CustomUnboundColumnData(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewColumnDataEventArgs e) {
+    protected void ASPxGridView1_CustomUnboundColumnData(object sender, DevExpress.Web.ASPxGridViewColumnDataEventArgs e) {
         ASPxGridView grid = (ASPxGridView)sender;
         int visibleIndex = grid.FindVisibleIndexByKeyValue(e.GetListSourceFieldValue("ProductID"));
         e.Value = (visibleIndex != 0) ?

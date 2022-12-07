@@ -1,5 +1,5 @@
 ﻿Imports Microsoft.VisualBasic
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 Imports System
 Imports System.Collections.Generic
 Imports System.Linq
@@ -12,7 +12,7 @@ Partial Public Class _Default
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
 
 	End Sub
-	Protected Sub ASPxGridView1_CustomUnboundColumnData(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewColumnDataEventArgs)
+	Protected Sub ASPxGridView1_CustomUnboundColumnData(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewColumnDataEventArgs)
 		Dim grid As ASPxGridView = CType(sender, ASPxGridView)
 		Dim visibleIndex As Integer = grid.FindVisibleIndexByKeyValue(e.GetListSourceFieldValue("ProductID"))
 		If (visibleIndex <> 0) Then
